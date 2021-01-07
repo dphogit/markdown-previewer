@@ -3,6 +3,7 @@ import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 const marked = require("marked");
 
+// Carriage return will allow <br> tag (line break)
 marked.setOptions({
   breaks: true,
 });
