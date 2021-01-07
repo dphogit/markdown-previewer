@@ -1,11 +1,23 @@
+// Google Font
 @import url("https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap");
+
+// Color Scheme
+$toolbar-color: #b4b5b2;
+$background-color: #2d5f7a;
+$window-color: #79a6bd;
+
+// Used bootstrap in combination with scss
+.container-fluid {
+  background-color: $background-color;
+  height: 100vh;
+}
 
 .row {
   #editor-window {
-    padding: 2.5%;
+    padding: 0 2.5% 1%;
     #editor {
-      border: 2px solid;
-      height: 80vh;
+      border: 2px solid white;
+      height: 75vh;
       width: 100%;
       resize: none;
       margin: auto;
@@ -13,19 +25,28 @@
       outline: none;
       font-family: "Lucida Console";
       padding: 0.5rem;
+      background-color: $window-color;
     }
   }
   #preview-window {
-    padding: 2.5%;
+    padding: 0 2.5% 1%;
     #preview {
-      border: 2px solid;
-      height: 80vh;
+      border: 2px solid white;
+      height: 75vh;
       width: 100%;
       resize: none;
       margin: auto;
       overflow: auto;
       font-size: 1.25rem;
       padding: 0.5rem;
+      background-color: $window-color;
+      pre {
+        background-color: $toolbar-color;
+      }
+      code {
+        background-color: $toolbar-color;
+        color: rgb(206, 37, 37);
+      }
     }
   }
 }
@@ -35,19 +56,40 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: teal;
+  background-color: $toolbar-color;
   height: 32px;
   padding: 0.5rem;
-  border-left: 2px solid;
-  border-right: 2px solid;
-  border-top: 2px solid;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
   font-family: "Goldman", sans-serif;
-  font #toolbar-icon {
+  #toolbar-icon {
     font-size: 16px;
   }
   #toolbar-name {
     font-size: 26px;
     margin-top: 1rem;
     padding-left: 0.75rem;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: white;
+  .header-text {
+    font-size: 2rem;
+  }
+  #title {
+    font-family: "Goldman", "Lucida Console", sans-serif;
+  }
+  #github-link {
+    font-size: 1.25rem;
+    color: white;
+    &:hover {
+      text-decoration: none;
+      font-size: 1.375rem;
+      color: #ffb703;
+    }
   }
 }

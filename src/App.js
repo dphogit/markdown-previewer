@@ -23,6 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
+        <Header />
         <div className="row">
           <Editor
             markdown={this.state.markdown}
@@ -34,6 +35,29 @@ class App extends React.Component {
     );
   }
 }
+
+const Header = () => {
+  return (
+    <header>
+      <p className="header-text" id="title">
+        Markdown Previewer
+      </p>
+      <span className="header-text">
+        <a
+          className="header-text"
+          href="https://github.com/dphogit"
+          target="_blank"
+          rel="noreferrer"
+          id="github-link"
+        >
+          Check out my Github&nbsp;
+          <i className="fab fa-github"></i>
+          &nbsp;@dphogit
+        </a>
+      </span>
+    </header>
+  );
+};
 
 const Toolbar = (props) => {
   return (
